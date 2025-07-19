@@ -159,7 +159,7 @@ nav {
 
 /* Hero Section */
 #hero {
-    height: 100vh;
+    min-height: 100vh; /* Use min-height instead of height */
     display: flex;
     align-items: center;
     background-color: #111;
@@ -779,11 +779,6 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-
-    #hero {
-        height: 130vh;
-    }
-
     .hero-content {
         flex-direction: column-reverse;
         text-align: center;
@@ -791,11 +786,34 @@ footer {
 
     .hero-text {
         padding-right: 0;
-        margin-top: 50px;
+        margin-top: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
     }
 
     .hero-btns {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        height: auto;
     }
 
     .about-content {
@@ -818,6 +836,27 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+    }
+
     .nav-links {
         position: fixed;
         top: 80px;
@@ -858,11 +897,11 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .section-title h2 {
@@ -876,11 +915,15 @@ footer {
 
 @media (max-width: 576px) {
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-text h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 0.8rem;
     }
 
     .btn {
@@ -891,6 +934,10 @@ footer {
     .hero-btns {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
     }
 
     .services-grid {
