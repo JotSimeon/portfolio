@@ -21,7 +21,10 @@ body {
     color: #fff;
     line-height: 1.6;
 }
-
+.text {
+    text-decoration: none;
+    color: var(--gray-color);
+}
 .container {
     width: 90%;
     max-width: 1200px;
